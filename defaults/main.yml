@@ -31,7 +31,7 @@ ct_grafana_ct_restart_policy: "always"
 ct_grafana_ct_restart: "no"
 ct_grafana_ct_pull: "no"
 ct_grafana_ct_recreate: "no"
-ct_grafana_ct_user: "{{ grafana_user_uid }}:{{ grafana_user_gid }}"
+ct_grafana_ct_user: "{{ ct_grafana_user_uid }}:{{ ct_grafana_user_gid }}"
 ct_grafana_ct_ports_default:
   - "{{ ct_grafana_bind_addr }}:{{ ct_grafana_bind_port }}:{{ ct_grafana_bind_ct_port }}"
 ct_grafana_ct_ports_extra: []
