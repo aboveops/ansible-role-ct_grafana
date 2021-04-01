@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: Valentin Gostev
+  description: Ansible role deploys Grafana container
+  company: AboveOps
+  role_name: ct_grafana
+  license: MIT
+  min_ansible_version: 2.9
+  platforms:
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+  galaxy_tags:
+    - grafana
+    - monitoring
+dependencies: []
+...
