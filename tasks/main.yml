@@ -1,4 +1,10 @@
 ---
+- name: "{{ ct_grafana_task_prefix }} Enable ports"
+  include_vars: "grafana_ports.yml"
+  when: ct_grafana_enable_ports|bool
+- name: "{{ ct_grafana_task_prefix }} Persist data?"
+  include_vars: persist_data.yml
+  when: ct_grafana_persist_data|bool
 - name: "{{ ct_grafana_task_prefix }} Create grafana group"
   group:
     name: "{{ ct_grafana_user_group }}"
@@ -35,7 +41,6 @@
     owner: "{{ grafana_user_name }}"
     group: "{{ grafana_user_group }}"
     mode: '0755'
-#################################################################################
 - name: "{{ ct_grafana_task_prefix }} Create container"
   docker_container:
     name: "{{ ct_grafana_ct_name }}"
