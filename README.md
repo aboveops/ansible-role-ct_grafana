@@ -1,3 +1,6 @@
+# DEPRECATION WARNING
+This ansible role has been deprecated in favor of collection [`almaops.monitoring`](https://github.com/almaops/ansible-collection-monitoring/tree/main/roles/ct_grafana) and advised to be used instead
+
 Role Name
 =========
 
